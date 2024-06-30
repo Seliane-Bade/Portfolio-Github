@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    background-color : #030c30;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.navbar a{
+    font-size: 18px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: .2s;
+}
+.navbar a.active,
+.navbar a:hover{
+    background: linear-gradient(to left, #451683, #2750f1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 500px;
+    margin-left: -30px;
+}
+
+.home-content h1,span{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.home-content h3{
+    font-size: 45px;
+}
+
+.home-content .typing-text{
+    color:  #2750f1;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid  #451683;
+    animation: typing 5s steps(19) infinite;
+}
+
+@keyframes typing{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 16ch;
+    }
+    100%{
+        width: 0ch;
+    }
+}
+
+.home-content p{
+    font-size: 20px;
+    margin: 30px 0 40px;
+}
+
+.home-content .buttons button{
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background: linear-gradient(to left, #451683, #2750f1);
+    transition: all 0.3s ease;
+}
+
+.home-content button, a{
+    width: 180px;
+    height: 48px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+}
+
+.home-content button:hover{
+    transform: scale(0.98);
+}
+
+.media-icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to left, #451683, #2750f1);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 20px 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+/*.media-icons a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #030c30;
+    border-radius: 50%;
+    transform: scale(.88);
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.media-icons a:hover::after{
+    transform: scale(0);
+}*/
+
+.home-img{
+    width: 410px;
+    height: 410px;
+}
+
+.home-img .glowing-circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.home-img .glowing-circle::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background :#030c30;
+    border-radius: 50%;
+}
+
+.glowing-circle span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #451683, #2750f1);
+    border-radius: 50%;
+}
+
+.glowing-circle span:nth-child(1){
+    filter: blur(10px);
+}
+
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img{
+    max-width: 35;
+    object-fit: cover;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+/*@media screen and (max-width: 950px){
+    .home{
+        flex-direction: column;
+    }
+    .home-content, .media-icons{
+        margin: 12px 50px;
+    }
+    .typing-text h2{
+        font-size: 30px;
+    }
+    .home-img .image{
+        width: 100%;
+    }
+}*/
