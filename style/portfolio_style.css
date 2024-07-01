@@ -144,21 +144,6 @@ body{
     transition: 0.5s ease-in-out;
 }
 
-/*.media-icons a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #030c30;
-    border-radius: 50%;
-    transform: scale(.88);
-    z-index: -1;
-    transition: 0.5s ease;
-}
-
-.media-icons a:hover::after{
-    transform: scale(0);
-}*/
 
 .home-img{
     width: 410px;
