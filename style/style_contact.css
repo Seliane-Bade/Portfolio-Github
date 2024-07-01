@@ -7,62 +7,6 @@
     font-family: "poppins", sans-serif;
 }
 
-body{
-    background-color : #030c30;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo{
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-}
-
-.navbar a{
-    font-size: 18px;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: 550;
-    margin-left: 35px;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: .2s;
-}
-.navbar a.active,
-.navbar a:hover{
-    background: linear-gradient(to left, #451683, #2750f1);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-.home{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 70px 10% 0;
-}
-
 /**********************************************************/
 
 .contact-section{
