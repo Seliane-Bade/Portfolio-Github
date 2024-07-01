@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
-    list-style: none;
 
 }
 
@@ -22,40 +21,56 @@ h3{
 .skill-section{
     width: 500px;
     margin: 60px auto;
-    color: aqua;
+    color: white;
     padding: 20px;
     background-color: #051248;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.skill-section li{
+.skill{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
     margin: 20px 0;
-    padding: 10px;
 }
 
-.bar{
-    background: grey;
-    display: block;
-    height: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all .3s cubic-bezier(.25,.8,.25,1);
+.skill-bar{
+    height: 14px;
+    background-color: #030c30;
+    border-radius: 8px;
 }
 
-.bar:hover{
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.skill-percent{
+    height: 14px;
+    background: linear-gradient(to left, #451683, #2750f1);
+    border-radius: 8px;
+    position: relative;
+    animation: fillBars 2.5s 1;
 }
 
-.bar span{
-    height: 20px;
-    float: left;
-    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
-
+.skill-percent::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
 }
 
-.html{
-    width: 60%;
-    height: 20px;
-    animation: html 3s;
+
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
 }
