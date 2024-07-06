@@ -210,17 +210,14 @@ body{
     }
 }
 
-/*@media screen and (max-width: 950px){
+@media screen and (max-width: 1200px){
     .home{
         flex-direction: column;
-    }
-    .home-content, .media-icons{
-        margin: 12px 50px;
     }
     .typing-text h2{
         font-size: 30px;
     }
-    .home-img .image{
-        width: 100%;
+    .home-img{
+        display: none;
     }
-}*/
+}
