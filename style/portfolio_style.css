@@ -75,16 +75,21 @@ body{
     margin-top: 10px;
 }
 
-.home-content h3{
+.home-content h2{
     font-size: 45px;
 }
 
-.home-content .typing-text{
+.home-content .job{
+    font-size: 35px;
+    color: white;
+}
+
+.home-content .job .typing-text{
     color:  #2750f1;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid  #451683;
-    animation: typing 5s steps(25) infinite;
+    border-right: 4px solid #061860;
+    animation: typing 5s steps(20) infinite;
 }
 
 @keyframes typing{
@@ -92,7 +97,7 @@ body{
         width: 0ch;
     }
     50%{
-        width: 16ch;
+        width: 15ch;
     }
     100%{
         width: 0ch;
@@ -218,6 +223,9 @@ body{
         font-size: 30px;
     }
     .home-img{
+        display: none;
+    }
+    .media-icons{
         display: none;
     }
 }

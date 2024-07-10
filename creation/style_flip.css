@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #6441a5, #2a0845);;
+}
+
+.wrapper{
+    position: relative;
+    height: 330px;
+    width: 620px;
+    perspective: 1000px;
+}
+
+.wrapper:hover .flip-card{
+   transform: rotateY(180deg); 
+}
+
+.wrapper .flip-card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #2a0845;
+    transform-style: preserve-3d ;
+    transition: all 0.5s ease-in-out;
+}
+
+.flip-card .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background:#6441a5;
+    border-top: 2px solid #1c052e;
+    border-left: 2px solid #1c052e;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card span.circle,
+.card span.square{
+    height: 110px;
+    width: 110px;
+    border: 10px solid #1c052e;
+}
+
+.card span.circle{
+    border-radius: 50%;
+}
+
+.card span.triangle{
+    position: relative;
+    height: 0;
+    width: 0;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 110px solid #1c052e;
+    margin-right: 16px;
+}
+
+.card span.triangle::before{
+    content: "";
+    height: 0;
+    width: 0;
+    left: -40px;
+    top: 20px;
+    position: absolute;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 80px solid #6441a5;
+}
+
+.back.card{
+    transform: rotateY(180deg);
+}
+
+.back.card .home-logo{
+    position: relative;
+    height: 65px;
+    width: 65px;
+    border: 5px solid #1c052e;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.home-logo .icon{
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) translateY(6px);
+    height: 15px;
+    width: 25px;
+    background: #1c052e;
+}
+
+.home-logo .icon::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    height: 25px;
+    width: 25px;
+    background: #1c052e;
+    transform: rotate(45deg);
+}
+
+.back.card .num{
+    font-size: 25px;
+    font-weight: 600;
+    color: #1c052e;
+}
