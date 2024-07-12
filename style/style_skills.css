@@ -24,7 +24,7 @@ h3{
     color: white;
     padding: 50px;
     background: rgba(255, 255, 255, 0.01);
-    background : linear-gradient(360deg, #3A1B6B, #181A3E);
+    background-color: #24275c;
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
