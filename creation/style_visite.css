@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #ee9ca7, #ffdde1);
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
 .profile-card{
@@ -32,6 +32,7 @@
     position: relative;
     height: 150px;
     width: 150px;
+
 }
 
 .image .profile-picture{
@@ -87,7 +88,7 @@
     padding: 8px 25px;
     margin: 0 20px;
     white-space: nowrap;
-    background-color: #ba5370; 
+    background-color: #f7797d;
 }
 
 .buttons .btn:hover{
