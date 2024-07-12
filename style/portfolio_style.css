@@ -18,7 +18,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 5px 10%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -51,6 +51,20 @@ body{
     background: linear-gradient(to left, #451683, #2750f1);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox{
+    display: none;
 }
 
 .home{
@@ -215,7 +229,7 @@ body{
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 950px){
     .home{
         flex-direction: column;
     }
@@ -227,5 +241,11 @@ body{
     }
     .media-icons{
         display: none;
+    }
+}
+
+@media (max-width : 950px){
+    .checkbtn{
+        display: block;
     }
 }
